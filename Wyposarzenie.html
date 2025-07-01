@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSP Zembrzyce – Oficjalna strona jednostki</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<header>
+  <div id="logo-napis">
+    <img src="LOGOs.png" alt="Logo OSP Zembrzyce" id="logo" />
+    <span id="napis">OCHOTNICZA STRAŻ POŻARNA W ZEMBRZYCACH</span>
+  </div>
+  <nav id="menu">
+    <a href="OSP.html"><i class="fa-solid fa-newspaper"></i>Główna</a>
+    <a href="Historia.html"><i class="fa-solid fa-book"></i> Historia</a>
+    <a href="#"><i class="fa-solid fa-truck-field"></i> Wyposażenie</a>
+    <a href="Członkowie.html"><i class="fa-solid fa-user-group"></i> Członkowie</a>
+    <a href="Członkowie.html"><i class="fa-solid fa-phone"></i> Kontakt</a>
+  </nav>
+</header>
+
+ 
+
+  <div class="sprzet-box">
+  <img src="woz.jpg" alt="Wóz strażacki" class="sprzet-img" />
+  <div class="sprzet-content">
+    <h3>539[K]48 – GBA 3/16 Volvo FL280/Bocar</h3>
+    <p>
+    Średni samochód ratowniczo-gaśniczy (GBA), zabudowany przez Bocar. Pojemność: ok. 3000 l wody, 300 l piany, napęd 4×4.
+    </p>
+  </div>
+</div>
+  <div class="sprzet-box">
+  <img src="woz.jpg" alt="Wóz strażacki" class="sprzet-img" />
+  <div class="sprzet-content">
+    <h3>539[K]47 – SLRR Ford Ranger</h3>
+    <p>
+    Lekki samochód ratowniczo-gaśniczy rozpoznawczo-ratowniczy (SLRR) , używany do patrolowania, szybkiego reagowania i transportu sprzętu w trudnym terenie.
+    </p>
+  </div>
+  
+</div>
+
+  <footer>
+    &copy; 2025 OSP Zembrzyce
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("scrolled", window.scrollY > 0);
+    });
+  </script>
+
+  <script>
+    const images = [
+      'STRAZ.jpg',
+      'VOLVUS.jpg',
+      'FORD.jpg'
+    ];
+
+    let current = 0;
+    const hero = document.getElementById('hero');
+
+    const updateHero = () => {
+      hero.style.opacity = 0;
+      setTimeout(() => {
+        hero.style.backgroundImage = `url('${images[current]}')`;
+        hero.style.opacity = 1;
+      }, 500);
+    };
+
+    document.getElementById('leftBtn').addEventListener('click', () => {
+      current = (current - 1 + images.length) % images.length;
+      updateHero();
+    });
+
+    document.getElementById('rightBtn').addEventListener('click', () => {
+      current = (current + 1) % images.length;
+      updateHero();
+    });
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      updateHero();
+    }, 8000);
+
+    updateHero();
+  </script>
+
+</body>
+</html>

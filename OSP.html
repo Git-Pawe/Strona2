@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSP Zembrzyce – Oficjalna strona jednostki</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+</head>
+<body>
+
+<header>
+  <div id="logo-napis">
+    <img src="LOGOs.png" alt="Logo OSP Zembrzyce" id="logo" />
+    <span id="napis">OCHOTNICZA STRAŻ POŻARNA W ZEMBRZYCACH</span>
+  </div>
+  <nav id="menu">
+    <a href="#aktualnosci"><i class="fa-solid fa-newspaper"></i>Aktualności</a>
+    <a href="Historia.html"><i class="fa-solid fa-book"></i> Historia</a>
+    <a href="Wyposarzenie.html"><i class="fa-solid fa-truck-field"></i> Wyposażenie</a>
+    <a href="Członkowie.html"><i class="fa-solid fa-user-group"></i> Członkowie</a>
+    <a href="Członkowie.html"><i class="fa-solid fa-phone"></i> Kontakt</a>
+  </nav>
+</header>
+
+  <section id="opis">
+    <h2>Witamy na oficjalnej stronie Ochotniczej Straży Pożarnej w Zembrzycach!</h2>
+    <span>
+      Jesteśmy tu, by służyć naszej społeczności, chronić i pomagać.  
+      Zobacz najnowsze informacje, poznaj naszą historię i dołącz do nas!
+    </span>
+    <div id="kontener-div">
+      <div class="obz"><i class="fa-solid fa-user-pen"></i><br>Dołącz do nas!</div>
+      <div class="obz"><i class="fa-solid fa-images"></i><br>Zobacz nasze zdjęcia</div>
+      <div class="obz"><a href="Historia.html"><i class="fa-solid fa-book"></i><br>Dowiedz się coś o nas</div></a>
+    </div>
+
+<div id="social-row">
+  <h2><a href="https://facebook.com" target="_blank" class="social-box">
+    <i class="fab fa-facebook"></i> Dołącz do naszego Facebooka
+  </a></h2>
+ <h2><a href="https://instagram.com" target="_blank" class="social-box">
+    <i class="fab fa-instagram"></i> Dołącz do naszego Instagrama
+  </a></h2> 
+</div>
+
+  </section>
+
+  <section id="hero">
+    <button id="leftBtn">&#10094;</button>
+    <button id="rightBtn">&#10095;</button>
+  </section>
+
+  <main>
+    <div id="main-kontener">
+      <!-- treść main -->
+    </div>
+  </main>
+
+  <article id="aktualnosci">
+  <h3>Główne aktualności</h3>
+  <div class="aktualnosci-container">
+    <div class="aktualnosc-box">
+      <img src="FORD.jpg" alt="Opis zdjęcia" class="ZDAZENIE">
+      <h4>Wielki pożar lasu</h4>
+      <p>W niedzielę nasza jednostka brała udział w akcji gaszenia pożaru w okolicznych lasach...</p>
+    </div>
+    <div class="aktualnosc-box">
+      <img src="FORD.jpg" alt="Opis zdjęcia" class="ZDAZENIE">
+      <h4>Pożar lasu 2</h4>
+      <p>Kolejna akcja naszej jednostki...</p>
+    </div>
+  
+    <!-- kolejne boxy... -->
+  </div>
+</article>
+
+  <footer>
+    &copy; 2025 OSP Zembrzyce
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("scrolled", window.scrollY > 0);
+    });
+  </script>
+
+  <script>
+    const images = [
+      'STRAZ.jpg',
+      'VOLVUS.jpg',
+      'FORD.jpg'
+    ];
+
+    let current = 0;
+    const hero = document.getElementById('hero');
+
+    const updateHero = () => {
+      hero.style.opacity = 0;
+      setTimeout(() => {
+        hero.style.backgroundImage = `url('${images[current]}')`;
+        hero.style.opacity = 1;
+      }, 500);
+    };
+
+    document.getElementById('leftBtn').addEventListener('click', () => {
+      current = (current - 1 + images.length) % images.length;
+      updateHero();
+    });
+
+    document.getElementById('rightBtn').addEventListener('click', () => {
+      current = (current + 1) % images.length;
+      updateHero();
+    });
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      updateHero();
+    }, 8000);
+
+    updateHero();
+  </script>
+
+</body>
+</html>

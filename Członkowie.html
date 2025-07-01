@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSP Zembrzyce – Oficjalna strona jednostki</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<header>
+  <div id="logo-napis">
+    <img src="LOGOs.png" alt="Logo OSP Zembrzyce" id="logo" />
+    <span id="napis">OCHOTNICZA STRAŻ POŻARNA W ZEMBRZYCACH</span>
+  </div>
+  <nav id="menu">
+    <a href="OSP.html"><i class="fa-solid fa-newspaper"></i>Główna</a>
+    <a href="Historia.html"><i class="fa-solid fa-book"></i> Historia</a>
+    <a href="Wyposarzenie.html"><i class="fa-solid fa-truck-field"></i> Wyposażenie</a>
+    <a href="#"><i class="fa-solid fa-user-group"></i> Członkowie</a>
+    <a href="#Kontakt"><i class="fa-solid fa-phone"></i> Kontakt</a>
+  </nav>
+</header>
+
+ <section id="Kontakt">
+  <table>
+    <h2 style="text-align: center; padding-top: 15px;">Kontakt do Zarządu</h2>
+  <thead>
+    <tr>
+      
+      <th>Imię i nazwisko</th>
+      <th>Funkcja</th>
+      <th>Telefon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>Antoni Pilch</td>
+      <td>Naczelnik</td>
+      <td>000-000-000</td>
+    </tr>
+    <tr>
+     
+      <td>Kacper Sałapatek</td>
+      <td>Skarbnik</td>
+      <td>000-000-000</td>
+    </tr>
+    <tr>
+      
+      <td>Dawid Kołata</td>
+      <td>Sekretarz</td>
+      <td>000-000-000</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+  <section id="Kontakt">
+  <table>
+    <h2 style="text-align: center; padding-top: 15px;">Lista Członków OSP Zembrzyce</h2>
+  <thead>
+    <tr>
+      
+      <th>Druhowie OSP Zembrzyce</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr>
+      
+      <td>Sławomir Suwada</td>
+    </tr>
+    <tr>
+      
+      <td>Antoni Pilch</td>
+    </tr>
+    <tr>
+     
+      <td>Kacper Sałapatek</td>
+
+    </tr>
+    <tr>
+      
+      <td>Dawid Kołata</td>
+
+    </tr>
+   
+    
+  </tbody>
+</table>
+</section>
+
+ 
+
+
+
+  <footer>
+    &copy; 2025 OSP Zembrzyce
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("scrolled", window.scrollY > 0);
+    });
+  </script>
+
+  <script>
+    const images = [
+      'STRAZ.jpg',
+      'VOLVUS.jpg',
+      'FORD.jpg'
+    ];
+
+    let current = 0;
+    const hero = document.getElementById('hero');
+
+    const updateHero = () => {
+      hero.style.opacity = 0;
+      setTimeout(() => {
+        hero.style.backgroundImage = `url('${images[current]}')`;
+        hero.style.opacity = 1;
+      }, 500);
+    };
+
+    document.getElementById('leftBtn').addEventListener('click', () => {
+      current = (current - 1 + images.length) % images.length;
+      updateHero();
+    });
+
+    document.getElementById('rightBtn').addEventListener('click', () => {
+      current = (current + 1) % images.length;
+      updateHero();
+    });
+
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      updateHero();
+    }, 8000);
+
+    updateHero();
+  </script>
+
+</body>
+</html>
