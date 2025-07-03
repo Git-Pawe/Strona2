@@ -80,13 +80,16 @@
     &copy; 2025 OSP Zembrzyce
   </footer>
 
-  <script>
+<script>
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     if (window.innerWidth > 768) {
       header.classList.toggle("scrolled", window.scrollY > 0);
+    } else {
+      header.classList.remove("scrolled");
     }
   });
+</script>
 </script>
 
   <script>
