@@ -2,11 +2,39 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <title>OSP Zembrzyce – Oficjalna strona jednostki</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  
+  <style>
+    @media (max-width: 768px) {
+      #menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--bg-box);
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      #menu.show {
+        display: flex;
+      }
+
+      #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--highlight);
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,74 +43,71 @@
     <img src="ZDJ/main/LOGOs.png" alt="Logo OSP Zembrzyce" id="logo" />
     <span id="napis">OCHOTNICZA STRAŻ POŻARNA W ZEMBRZYCACH</span>
   </div>
+  <button id="menu-toggle" aria-label="Otwórz menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
   <nav id="menu">
-    <a href="#aktualnosci"><i class="fa-solid fa-newspaper"></i>Aktualności</a>
+    <a href="#aktualnosci"><i class="fa-solid fa-newspaper"></i> Aktualności</a>
     <a href="Historia.html"><i class="fa-solid fa-book"></i> Historia</a>
     <a href="Wyposarzenie.html"><i class="fa-solid fa-truck-field"></i> Wyposażenie</a>
     <a href="Członkowie.html"><i class="fa-solid fa-user-group"></i> Członkowie</a>
-    <a href="Członkowie.html"><i class="fa-solid fa-phone"></i> Kontakt</a>
+    <a href="Kontakt.html"><i class="fa-solid fa-phone"></i> Kontakt</a>
   </nav>
 </header>
 
-  <section id="opis">
-    <h2>Witamy na oficjalnej stronie Ochotniczej Straży Pożarnej w Zembrzycach!</h2>
-    <span>
-      Jesteśmy tu, by służyć naszej społeczności, chronić i pomagać.  
-      Zobacz najnowsze informacje, poznaj naszą historię i dołącz do nas!
-    </span>
+<section id="opis">
+  <h2>Witamy na oficjalnej stronie Ochotniczej Straży Pożarnej w Zembrzycach!</h2>
+  <span>
+    Jesteśmy tu, by służyć naszej społeczności, chronić i pomagać.  
+    Zobacz najnowsze informacje, poznaj naszą historię i dołącz do nas!
+  </span>
   <div id="kontener-div">
-  <a href="Członkowie.html">
-    <div class="obz">
-      <i class="fa-solid fa-user-pen"></i><br>
-      Dołącz do nas!
-    </div>
-  </a>
-  
-  <!---<a href="galeria.html">
-    <div class="obz">
-      <i class="fa-solid fa-images"></i><br>
-      Zobacz nasze zdjęcia
-    </div>
-  </a>-->
-  
-  <a href="Historia.html">
-    <div class="obz">
-      <i class="fa-solid fa-book"></i><br>
-      Dowiedz się coś o nas
-    </div>
-  </a>
-</div>
+    <a href="Członkowie.html">
+      <div class="obz">
+        <i class="fa-solid fa-user-pen"></i><br>
+        Dołącz do nas!
+      </div>
+    </a>
+    
+    <!-- <a href="galeria.html">
+      <div class="obz">
+        <i class="fa-solid fa-images"></i><br>
+        Zobacz nasze zdjęcia
+      </div>
+    </a> -->
+    
+    <a href="Historia.html">
+      <div class="obz">
+        <i class="fa-solid fa-book"></i><br>
+        Dowiedz się coś o nas
+      </div>
+    </a>
+  </div>
 
+  <div id="social-row">
+    <h2><a href="https://www.facebook.com/ospzembrzyce" target="_blank" class="social-box">
+      <i class="fab fa-facebook"></i> Dołącz do naszego Facebooka
+    </a></h2>
+  </div>
+</section>
 
-<div id="social-row">
-  <h2><a href="https://www.facebook.com/ospzembrzyce" target="_blank" class="social-box">
-    <i class="fab fa-facebook"></i> Dołącz do naszego Facebooka
-  </a></h2>
-</div>
+<section id="hero">
+  <button id="leftBtn" aria-label="Poprzedni slajd">&#10094;</button>
+  <button id="rightBtn" aria-label="Następny slajd">&#10095;</button>
+</section>
 
-  </section>
+<main>
+  <div id="main-kontener">
+    <!-- treść main -->
+  </div>
+</main>
 
-  <section id="hero">
-    <button id="leftBtn">&#10094;</button>
-    <button id="rightBtn">&#10095;</button>
-  </section>
-
-  <main>
-    <div id="main-kontener">
-      <!-- treść main -->
-    </div>
-  </main>
-
-
-  
-  <article id="aktualnosci">
+<article id="aktualnosci">
   <h3>Główne aktualności</h3>
   <div class="aktualnosci-container">
-<!-- kolejne boxy... -->
-
     <div class="aktualnosc-box">
-      <img src="ZDJ/Zdarzenia/Śleszowice03.07.2025.jpg" alt="Wypadek" class="ZDAZENIE">
-      <img src="ZDJ/Zdarzenia/Śleszowice2,03.07.2025.jpg" alt="Wypadek" class="ZDAZENIE">
+      <img src="ZDJ/Zdarzenia/Śleszowice03.07.2025.jpg" alt="Wypadek 1" class="ZDAZENIE">
+      <img src="ZDJ/Zdarzenia/Śleszowice2,03.07.2025.jpg" alt="Wypadek 2" class="ZDAZENIE">
       <h4>🚨Alarm 15/2025🚨</h4>
       <h5>📅DATA 02/07/2025 godzina 11:32</h5>
       <p>🌍Miejscowość ŚLESZOWICE</p>
@@ -90,68 +115,71 @@
       <p>🚒GBARt, 🚒GBARt - JRG Sucha Beskidzka </p>
       <p>🚒GBARt - OSP Zembrzyce</p>  
       <p>🚑Zespół Ratownictwa Medycznego</p> 
-      <p>🚓Policja </p>
-      </p>
+      <p>🚓Policja</p>
       <p>fot: <a href="https://www.facebook.com/malarmowo" target="_blank">Małopolska alarmowo</a></p>
     </div>
-
-    
-    <!-- kolejne boxy... -->
   </div>
 </article>
 
-  <footer>
-    &copy; 2025 OSP Zembrzyce
-  </footer>
+<footer>
+  &copy; 2025 OSP Zembrzyce
+</footer>
 
 <script>
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
+  // Sticky header behavior
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
 
-  if (window.innerWidth > 768) {
-    header.classList.toggle("scrolled", window.scrollY > 0);
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-</script>
+    if (window.innerWidth > 768) {
+      header.classList.toggle("scrolled", window.scrollY > 0);
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 
+  // Hero slider
+  const images = [
+    'ZDJ/main/STRAZ.jpg',
+    'ZDJ/main/VOLVUS.jpg',
+    'ZDJ/main/FORD.jpg'
+  ];
 
-  <script>
-    const images = [
-      'ZDJ/main/STRAZ.jpg',
-      'ZDJ/main/VOLVUS.jpg',
-      'ZDJ/main/FORD.jpg'
-    ];
+  let current = 0;
+  const hero = document.getElementById('hero');
 
-    let current = 0;
-    const hero = document.getElementById('hero');
+  const updateHero = () => {
+    hero.style.opacity = 0;
+    setTimeout(() => {
+      hero.style.backgroundImage = `url('${images[current]}')`;
+      hero.style.opacity = 1;
+    }, 500);
+  };
 
-    const updateHero = () => {
-      hero.style.opacity = 0;
-      setTimeout(() => {
-        hero.style.backgroundImage = `url('${images[current]}')`;
-        hero.style.opacity = 1;
-      }, 500);
-    };
-
-    document.getElementById('leftBtn').addEventListener('click', () => {
-      current = (current - 1 + images.length) % images.length;
-      updateHero();
-    });
-
-    document.getElementById('rightBtn').addEventListener('click', () => {
-      current = (current + 1) % images.length;
-      updateHero();
-    });
-
-    setInterval(() => {
-      current = (current + 1) % images.length;
-      updateHero();
-    }, 8000);
-
+  document.getElementById('leftBtn').addEventListener('click', () => {
+    current = (current - 1 + images.length) % images.length;
     updateHero();
-  </script>
+  });
+
+  document.getElementById('rightBtn').addEventListener('click', () => {
+    current = (current + 1) % images.length;
+    updateHero();
+  });
+
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    updateHero();
+  }, 8000);
+
+  updateHero();
+
+  // Hamburger menu (mobile)
+  const toggleBtn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
