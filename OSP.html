@@ -105,14 +105,15 @@
   </footer>
 
 <script>
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
 
-    // Tylko na desktopie dodajemy/zmieniamy klasę "scrolled"
-    if (window.innerWidth > 768) {
-      header.classList.toggle("scrolled", window.scrollY > 0);
-    }
-  });
+  if (window.innerWidth > 768) {
+    header.classList.toggle("scrolled", window.scrollY > 0);
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
 </script>
 
 
