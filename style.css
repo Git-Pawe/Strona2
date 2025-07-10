@@ -121,7 +121,7 @@ main {
 
 #social-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 40px;
   padding: 0 40px;
 }

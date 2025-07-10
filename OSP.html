@@ -55,12 +55,9 @@
 
 
 <div id="social-row">
-  <h2><a href="https://facebook.com" target="_blank" class="social-box">
+  <h2><a href="https://www.facebook.com/ospzembrzyce" target="_blank" class="social-box">
     <i class="fab fa-facebook"></i> Dołącz do naszego Facebooka
   </a></h2>
- <h2><a href="https://instagram.com" target="_blank" class="social-box">
-    <i class="fab fa-instagram"></i> Dołącz do naszego Instagrama
-  </a></h2> 
 </div>
 
   </section>
@@ -107,13 +104,17 @@
     &copy; 2025 OSP Zembrzyce
   </footer>
 
- <script>
-    window.addEventListener("scroll", function () {
-      const header = document.querySelector("header");
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+
+    // Tylko na desktopie dodajemy/zmieniamy klasę "scrolled"
+    if (window.innerWidth > 768) {
       header.classList.toggle("scrolled", window.scrollY > 0);
-    });
-  </script>
+    }
+  });
 </script>
+
 
   <script>
     const images = [
