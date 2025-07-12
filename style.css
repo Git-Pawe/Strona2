@@ -1,25 +1,12 @@
-:root {
-  --bg-main: #1e1e1e;
-  --bg-section: #2a2a2a;
-  --bg-box: #333;
-  --text-main: #e0cba8;
-  --text-sub: #c7b299;
-  --highlight: #dd914c;
-  --hover-bg: #3a3a3a;
-  --hover-shadow: rgba(255, 140, 80, 0.2);
-  --header-bg: #252525;
-
-}
-
 * {
   margin: 0;
   box-sizing: border-box;
-  color: var(--text-main);
+  color: #e0cba8;
   font-family: sans-serif;
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: #1e1e1e;;
 }
 
 header {
@@ -33,7 +20,7 @@ header {
   padding: 0 40px;
   transition: background-color 0.3s ease;
   z-index: 1000;
-  background-color: var(--header-bg);
+  background-color: #252525;
 }
 
 header.scrolled {
@@ -49,7 +36,7 @@ header.scrolled {
 #napis {
   font-size: 25px;
   font-weight: bold;
-  color: var(--highlight);
+  color: #dd914c;
   white-space: nowrap;
 }
 
@@ -75,10 +62,10 @@ header.scrolled {
 }
 
 #menu a:hover {
-  background-color: var(--hover-bg);
-  color: var(--highlight);
+  background-color: #3a3a3a;
+  color: #dd914c;
   font-weight: bold;
-  box-shadow: 0 0 10px var(--hover-shadow);
+  box-shadow: 0 0 10px rgba(255, 140, 80, 0.2);
   cursor: pointer;
 }
 
@@ -97,7 +84,7 @@ main {
 
 #opis {
   width: 100%;
-  background-color: var(--bg-section);
+  background-color: #2a2a2a;
   text-align: center;
   padding: 40px 20px;
 }
@@ -168,7 +155,7 @@ main {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.1);
-  color: var(--text-main);
+  color: #e0cba8;
   border: none;
   padding: 12px;
   font-size: 24px;
@@ -194,7 +181,7 @@ article {
   text-align: center;
   width: 100%;
   padding: 40px 0;
-  background-color: var(--bg-section);
+  background-color: #2a2a2a;
 }
 
 #aktualnosci {
@@ -212,7 +199,7 @@ article {
 }
 
 .aktualnosc-box {
-  background-color: var(--bg-box);
+  background-color: #333;
   padding: 20px;
   border-radius: 10px;
   width: calc(33% - 20px);
@@ -232,18 +219,18 @@ article {
 
 .aktualnosc-box p {
   font-size: 16px;
-  color: var(--text-sub);
+  color: #c7b299;
 }
 
 table {
   width: 50%;
   margin: 40px auto;
   border-collapse: collapse;
-  background-color: var(--bg-box);
-  color: var(--text-main);
+  background-color: #333;
+  color: #e0cba8;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 15px var(--hover-shadow);
+  box-shadow: 0 0 15px rgba(255, 140, 80, 0.2);
 }
 
 th,td {
@@ -253,19 +240,19 @@ th,td {
 }
 
 thead {
-  background-color: var(--header-bg);
+  background-color: #252525;
 }
 
 tr:hover {
-  background-color: var(--hover-bg);
+  background-color: #3a3a3a;
 }
 
 .sprzet-box {
   display: flex;
-  background-color: var(--bg-box);
+  background-color: #333;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 15px var(--hover-shadow);
+  box-shadow: 0 0 15px rgba(255, 140, 80, 0.2);
   margin: 40px auto;
   max-width: 1000px;
 }
@@ -299,7 +286,7 @@ footer {
   height: 50px;
   text-align: center;
   padding-top: 10px;
-  background-color: var(--header-bg);
+  background-color: #252525;
 }
 
 .historia {
@@ -348,6 +335,7 @@ footer {
 
 @media (max-width: 768px) {
   header {
+    position: relative;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
