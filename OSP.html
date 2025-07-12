@@ -105,8 +105,9 @@
   </footer>
 
 <script>
-window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
+  if (!header) return;
 
   if (window.innerWidth > 768) {
     header.classList.toggle("scrolled", window.scrollY > 0);
@@ -114,10 +115,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
-</script>
 
-
-  <script>
     const images = [
       'ZDJ/main/STRAZ.jpg',
       'ZDJ/main/VOLVUS.jpg',
@@ -151,7 +149,6 @@ window.addEventListener("scroll", function () {
     }, 8000);
 
     updateHero();
-  </script>
-
+</script>
 </body>
 </html>
