@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #1e1e1e;;
+  background-color: #1e1e1e;
 }
 
 header {
@@ -185,6 +185,7 @@ article {
 }
 
 #aktualnosci {
+  max-height: 900px;
   overflow-y: scroll;
 }
 
@@ -221,7 +222,10 @@ article {
   font-size: 16px;
   color: #c7b299;
 }
-
+.Licznik_wyjazdów
+{
+  text-align: center;
+}
 table {
   width: 50%;
   margin: 40px auto;
