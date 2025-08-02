@@ -193,7 +193,7 @@ article {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
   height: 700px;
   padding: 20px;
@@ -424,4 +424,5 @@ footer {
     font-size: 20px;
     padding: 8px;
   }
+
 }
