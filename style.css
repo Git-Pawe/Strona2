@@ -141,7 +141,7 @@ main {
   width: calc(100% - 40px);
   height: 1050px;
   margin: 20px auto;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -427,4 +427,5 @@ footer {
   }
 
 }
+
 
