@@ -340,7 +340,7 @@ ul
 {
   padding-left: 150px;
 }
-ul li {
+ li {
   display: flex;
   align-items: center;  /* wyśrodkowanie ikonki i tekstu w pionie */
   gap: 6px;             /* odstęp między ikonką a tekstem */
@@ -437,6 +437,7 @@ ul li {
   }
 
 }
+
 
 
 
