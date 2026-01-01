@@ -345,7 +345,14 @@ ul
   align-items: center;  /* wyśrodkowanie ikonki i tekstu w pionie */
   gap: 6px;             /* odstęp między ikonką a tekstem */
 }
-
+ .rok26
+ {
+  width: 98%;
+  height: 55px;
+  background-color: #333;
+   padding: 10px;
+  border-radius: 10px;
+ }
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
@@ -437,6 +444,7 @@ ul
   }
 
 }
+
 
 
 
