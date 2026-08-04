@@ -8,7 +8,17 @@
 body {
   background-color: #1e1e1e;
 }
-
+ .rok26
+ {
+  width: 98%;
+  height: 55px;
+  background-color: #333;
+   padding: 10px;
+  border-radius: 10px;
+ }
+/* =======================================================
+⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇   HEADER   ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+======================================================= */
 header {
   position: sticky;
   top: 0;
@@ -22,34 +32,25 @@ header {
   z-index: 1000;
   background-color: #252525;
 }
-
-header.scrolled {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 #logo-napis {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-
+#logo {
+  width: 100px;
+  height: auto;
+}
 #napis {
   font-size: 25px;
   font-weight: bold;
   color: #dd914c;
   white-space: nowrap;
 }
-
-#logo {
-  width: 100px;
-  height: auto;
-}
-
 #menu {
   display: flex;
   gap: 30px;
 }
-
 #menu a {
   display: inline-flex;
   align-items: center;
@@ -60,7 +61,6 @@ header.scrolled {
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
 }
-
 #menu a:hover {
   background-color: #3a3a3a;
   color: #dd914c;
@@ -68,45 +68,48 @@ header.scrolled {
   box-shadow: 0 0 10px rgba(255, 140, 80, 0.2);
   cursor: pointer;
 }
-
 #menu a i {
   font-size: 18px;
 }
-
-main {
-  width: 100%;
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-
-#main-kontener {
-  display: flex;
-  width: 100%;
-}
-
+/* =======================================================
+                           HEADER   
+======================================================= */
+/* =======================================================
+                          OPIS   
+======================================================= */
 #opis {
   width: 100%;
   background-color: #2a2a2a;
   text-align: center;
   padding: 40px 20px;
 }
-
 #opis h2 {
   margin-bottom: 15px;
 }
-
 #kontener-div {
   display: flex;
   justify-content: center;
   gap: 60px;
   margin-top: 30px;
 }
-
+.obz {
+  width: 200px;
+  font-size: 18px;
+}
+.obz i {
+  font-size: 50px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
 #social-row {
   display: flex;
   justify-content: center;
   margin-top: 40px;
   padding: 0 40px;
 }
-
 .social-box {
   flex: 1;
   max-width: 300px;
@@ -117,26 +120,18 @@ main {
   gap: 10px;
   transition: color 0.3s;
 }
-
 .social-box i {
   font-size: 1.5em;
 }
-
 .social-box:hover {
   color: #ccc;
 }
-
-.obz {
-  width: 200px;
-  font-size: 18px;
-}
-
-.obz i {
-  font-size: 50px;
-  opacity: 0.9;
-  margin-bottom: 10px;
-}
-
+/* =======================================================
+                          OPIS   
+======================================================= */
+/* =======================================================
+                          HERO  
+======================================================= */
 #hero {
   width: calc(100% - 40px);
   height: 1050px;
@@ -149,7 +144,6 @@ main {
   position: relative;
   transition: opacity 1s ease-in-out;
 }
-
 #hero button {
   position: absolute;
   top: 50%;
@@ -164,31 +158,50 @@ main {
   border-radius: 50%;
   transition: background-color 0.3s;
 }
-
 #hero button:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 #leftBtn {
   left: 20px;
 }
-
 #rightBtn {
   right: 20px;
 }
-
+/* =======================================================
+                          HERO  
+======================================================= */
+/* =======================================================
+                          MAIN  
+======================================================= */
+main {
+  width: 100%;
+}
+#main-kontener 
+{
+  display: flex;
+  width: 100%;
+}
+/* =======================================================
+                          MAIN  
+======================================================= */
+/* =======================================================
+                          AKTUALNOŚCI 
+======================================================= */
 article {
   text-align: center;
   width: 100%;
   padding: 40px 0;
   background-color: #2a2a2a;
 }
-
 #aktualnosci {
   max-height: 900px;
   overflow-y: scroll;
 }
 
+.Licznik_wyjazdów
+{
+  text-align: center;
+}
 .aktualnosci-container {
   display: flex;
   flex-wrap: wrap;
@@ -198,35 +211,61 @@ article {
   height: 700px;
   padding: 20px;
 }
-
 .aktualnosc-box {
   background-color: #333;
   padding: 20px;
   border-radius: 10px;
   width: calc(33% - 20px);
-}
+   max-height: 550px;
+    overflow-y: auto;
+    scrollbar-width: none;
 
+}
 .aktualnosc-box img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-
 .aktualnosc-box h4 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
 .aktualnosc-box p {
   font-size: 16px;
   color: #c7b299;
 }
-.Licznik_wyjazdów
-{
-  text-align: center;
+.TableIND {
+    width: 100%;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: #333;
+    color: #e0cba8;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 140, 80, 0.2);
 }
-table {
+
+.TableIND ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TableIND li {
+    padding: 6px 0;
+}
+/* =======================================================
+                          AKTUALNOŚCI 
+======================================================= */
+
+/* =======================================================
+   CZŁONKOWIE.HTML
+======================================================= */
+/*table {
   width: 50%;
   margin: 40px auto;
   border-collapse: collapse;
@@ -236,21 +275,46 @@ table {
   overflow: hidden;
   box-shadow: 0 0 15px rgba(255, 140, 80, 0.2);
 }
-
+thead {
+  background-color: #252525;
+}
 th,td {
   padding: 15px;
   text-align: center;
   border-bottom: 1px solid #bbb;
 }
-
-thead {
-  background-color: #252525;
-}
-
 tr:hover {
   background-color: #3a3a3a;
+} */
+.członkowie
+{
+ width: 50%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background-color: #333;
+  color: #e0cba8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 140, 80, 0.2);
 }
-
+.członkowieTH
+{
+  background-color: #252525;
+}
+th,td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+}
+tr:hover {
+  background-color: #3a3a3a;
+} 
+/* =======================================================
+   CZŁONKOWIE.HTML
+======================================================= */
+/* =======================================================
+   WYPOSAŻENIE.HTML
+======================================================= */
 .sprzet-box {
   display: flex;
   background-color: #333;
@@ -260,40 +324,33 @@ tr:hover {
   margin: 40px auto;
   max-width: 1000px;
 }
-
 .sprzet-img {
   width: 300px;
   height: 200px;
   object-fit: cover;
 }
-
 .sprzet-content {
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .sprzet-content h3 {
   text-align: center;
   margin-bottom: 10px;
   font-size: 24px;
   
 }
-
 .sprzet-content p {
   font-size: 16px;
   line-height: 1.6;
 }
-
-footer {
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  padding-top: 10px;
-  background-color: #252525;
-}
-
+/* =======================================================
+   WYPOSAŻENIE.HTML
+======================================================= */
+/* =======================================================
+   HISTORIA.HTML
+======================================================= */
 .historia {
   max-width: 900px;
   margin: 0 auto;
@@ -302,7 +359,6 @@ footer {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(217, 176, 140, 0.4);
 }
-
 .historia h2 {
   font-size: 2rem;
   margin-bottom: 5px;
@@ -310,7 +366,6 @@ footer {
   padding-bottom: 8px;
   text-align: center;
 }
-
 .historia h4 {
   font-weight: 400;
   font-size: 1.2rem;
@@ -318,12 +373,10 @@ footer {
   text-align: center;
   margin: 0 0 20px 0;
 }
-
 .historia .text {
   margin-bottom: 18px;
   text-align: justify;
 }
-
 .historia img {
   max-width: 100%;
   margin: 30px auto;
@@ -331,11 +384,9 @@ footer {
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(217, 176, 140, 0.5);
 }
-
 .autor {
   float: right;
 }
-
 ul
 {
   padding-left: 150px;
@@ -345,17 +396,32 @@ ul
   align-items: center;  /* wyśrodkowanie ikonki i tekstu w pionie */
   gap: 6px;             /* odstęp między ikonką a tekstem */
 }
- .rok26
- {
-  width: 98%;
-  height: 55px;
-  background-color: #333;
-   padding: 10px;
-  border-radius: 10px;
- }
+/* =======================================================
+   HISTORIA.HTML
+======================================================= */
+
+footer {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  background-color: #252525;
+}
+
 /* MEDIA QUERY */
 
+/* =======================================================
+   RESPONSYWNOŚĆ (max-width: 768px)
+======================================================= */
+
 @media (max-width: 768px) {
+
+  /* =======================================================
+     WSPÓLNE DLA WSZYSTKICH STRON
+  ======================================================= */
+
+  /* ---------- HEADER ---------- */
+
   header {
     position: relative;
     flex-direction: column;
@@ -383,6 +449,8 @@ ul
     font-size: 14px;
   }
 
+  /* ---------- MENU ---------- */
+
   #menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -399,6 +467,12 @@ ul
     border-radius: 6px;
     text-align: center;
   }
+
+  /* =======================================================
+     INDEX.HTML
+  ======================================================= */
+
+  /* ---------- OPIS ---------- */
 
   #kontener-div {
     flex-direction: column;
@@ -417,21 +491,7 @@ ul
     padding: 0;
   }
 
-  .aktualnosc-box,
-  .sprzet-box {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .aktualnosc-box img,
-  .sprzet-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .sprzet-content {
-    padding: 15px;
-  }
+  /* ---------- HERO ---------- */
 
   #hero {
     height: 400px;
@@ -443,9 +503,46 @@ ul
     padding: 8px;
   }
 
+  /* ---------- AKTUALNOŚCI ---------- */
+
+  .aktualnosc-box {
+    width: 100%;
+  }
+
+  .aktualnosc-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* =======================================================
+     WYPOSAŻENIE.HTML
+  ======================================================= */
+
+  .sprzet-box {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .sprzet-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sprzet-content {
+    padding: 15px;
+  }
+
+  /* =======================================================
+     CZŁONKOWIE.HTML
+     (brak stylów responsywnych)
+  ======================================================= */
+
+  /* =======================================================
+     HISTORIA.HTML
+     (brak stylów responsywnych)
+  ======================================================= */
+
 }
-
-
 
 
 
